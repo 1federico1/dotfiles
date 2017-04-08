@@ -1,0 +1,9 @@
+! ------------------------------------------------------------------------------
+! ! ROFI Color theme
+! ! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+rofi.color-window: argb:5a393939, argb:d393939, argb:0268bd2
+rofi.color-normal: argb:60393939, #ffffff, argb:3f393939, argb:910a283d, #ffffff
+rofi.color-active: #393939, #268bd2, #393939, #268bd2, #205171
+rofi.color-urgent: #393939, #f3843d, #393939, #268bd2, #ffc39c
+Xcursor.theme: Breeze-Obsidian
