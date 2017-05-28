@@ -4,26 +4,34 @@
 BROWSER=/usr/bin/firefox
 EDITOR=/usr/bin/vim
 
+export TERM="xterm-256color"
+
 # Path to your oh-my-zsh installation.
   export ZSH=/home/federico/.oh-my-zsh
 
  
   alias info='info --vi-keys'
-  PATH=/home/federico/Downloads/clion-2016.3.3/bin:$PATH
+  alias startvm='sudo mount /dev/sda4 /mnt;virtualbox --startvm LXLE-BIAR-1.5c&'
+  PATH=/home/federico/Dev/clion-2017.1.1/bin:$PATH
   export PATH
+  alias clion='clion.sh&'
 
   PATH=/home/federico/Dev/idea-IU-171.4249.4/bin:$PATH
+  export PATH
+  alias intellij='idea.sh&'
+  
+  PATH=/home/federico/Dev/pycharm-2017.1.1/bin:$PATH
   export PATH
 
   PATH=/home/federico/Dev/netbeans-8.2/bin/:$PATH
   export PATH
- 
-
+  alias pycharm='pycharm.sh&'
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 POWERLINE9k_MODE="awesome-fontconfig"
-ZSH_THEME="powerlevel9k/powerlevel9k"
+#ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="theunraveler"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
 POWERLEVEL9K_DISABLE_RPROMPT=true
