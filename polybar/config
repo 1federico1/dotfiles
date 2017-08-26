@@ -33,11 +33,11 @@ content = " "
 [bar/example]
 monitor = LVDS1
 width = 100%
-height = 20
+height = 18
 offset-x = 0%
 offset-y = 0
 radius = 6.0
-fixed-center = false
+fixed-center = true
 
 ;override-redirect = true
 ;wm-restack = i3
@@ -61,8 +61,8 @@ font-2 = "Wuncon Siji:pixelsize=10;1"
 font-3 = "FontAwesome:pixelsize=10;0"
 
 modules-left = i3 xwindow
-modules-center = mpd
-modules-right = filesystem xbacklight volume memory cpu wlan eth battery temperature date
+modules-center = mpd date
+modules-right = filesystem xbacklight volume memory cpu wlan eth battery temperature
 
 tray-position = right
 tray-padding = 2
@@ -230,7 +230,7 @@ interval = 3.0
 format-connected = <ramp-signal> <label-connected>
 ;format-connected-underline = #9f78e1
 ;label-connected = %essid%
-label-connected = %essid% %downspeed:3:8%%upspeed:3:8%
+label-connected =  %downspeed:3:8%%upspeed:3:8%
 format-disconnected =
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
@@ -252,7 +252,9 @@ interval = 3.0
 ;format-connected-underline = #55aa55
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %local_ip%
+; label-connected = %local_ip%
+label-connected  =  %downspeed:3:8%%upspeed:3:8%
+
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
@@ -264,13 +266,13 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date =
+date = %A %D
 date-alt = " %Y-%m-%d"
 
 time = %H:%M
 time-alt = %H:%M:%S
 
-format-prefix = 
+# format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
 ;format-underline = #0a6cf5
 
@@ -338,7 +340,7 @@ animation-charging-framerate = 750
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
-warn-temperature = 60
+warn-temperature = 80
 
 format = <ramp> <label>
 ;format-underline = #f50a4d
