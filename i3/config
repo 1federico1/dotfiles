@@ -207,6 +207,8 @@ exec --no-startup-id dropbox start
 
 focus_follows_mouse no
 
+# unclutter
+exec --no-startup-id unclutter --jitter 100 --ignore-scrolling -b
 # Natural scrolling
 exec --no-startup-id synclient HorizEdgeScroll=1 VertEdgeScroll=1 VertScrollDelta=-111 TapButton2=3 TapButton3=2
 
