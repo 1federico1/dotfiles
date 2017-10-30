@@ -1,6 +1,6 @@
 [Configuration]
-ColorForeground=#CDD3DE
-ColorBackground=#263238
+ColorForeground=#dcdcdcdcdcdc
+ColorBackground=#2f2f32324343
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBellUrgent=FALSE
@@ -26,10 +26,9 @@ MiscRewrapOnResize=TRUE
 MiscUseShiftArrowsToScroll=FALSE
 MiscSlimTabs=FALSE
 ColorCursor=#dcdcdcdcdcdc
-ColorForeground=#dcdcdcdcdcdc
-ColorBackground=#2f2f32324343
 ColorPalette=#29292b2b3a3a;#f5f584848484;#afaff9f9c6c6;#f3f3f4f4abab;#a3a3d6d6f7f7;#f6f69d9dbfbf;#afaff9f9f5f5;#babacfcfdcdc;#9a9a9a9adbdb;#f5f584848484;#afaff9f9c6c6;#f3f3f4f4abab;#a3a3d6d6f7f7;#f6f69d9dbfbf;#afaff9f9f5f5;#dcdcdcdcdcdc
 TitleMode=TERMINAL_TITLE_HIDE
 FontName=Source Code Pro Medium 11
 ScrollingUnlimited=TRUE
+ScrollingOnOutput=FALSE
 
