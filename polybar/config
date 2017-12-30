@@ -31,12 +31,12 @@ type = custom/text
 content = " " 
 
 [bar/example]
-monitor = LVDS1
+monitor = LVDS-1
 width = 100%
-height = 18
+height = 14
 offset-x = 0%
 offset-y = 0
-radius = 6.0
+radius = 0.0
 fixed-center = true
 
 ;override-redirect = true
@@ -55,10 +55,10 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = fixed:pixelsize=10;1
+font-0 = "Hack:pixelsize=8;1"
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = "Wuncon Siji:pixelsize=10;1"
-font-3 = "FontAwesome:pixelsize=10;0"
+font-2 = "Hack:pixelsize=10;1"
+font-3 = "FontAwesome:pixelsize=8;0"
 
 modules-left = i3 xwindow
 modules-center = mpd date
@@ -81,6 +81,45 @@ tray-transparent = true
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
 
+[bar/left]
+monitor = VGA1
+width = 100%
+height = 14
+offset-x = 0%
+offset-y = 0
+radius = 0.0
+fixed-center = true
+
+;override-redirect = true
+;wm-restack = i3
+background = #00000000
+foreground = #e2e2e2
+line-size = 3
+line-color = #f00
+
+border-size = 4
+border-color = #00000000
+
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = fixed:pixelsize=8;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = "Wuncon Siji:pixelsize=8;1"
+font-3 = "FontAwesome:pixelsize=8;0"
+
+modules-left = i3 xwindow
+modules-center = mpd date
+modules-right = filesystem xbacklight volume memory cpu wlan eth battery temperature
+
+tray-position = right
+tray-padding = 2
+
+tray-transparent = true
+
 [module/xwindow]
 type = internal/xwindow
 label-maxlen = 50
@@ -90,12 +129,12 @@ label = %title%
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.secondary}
+# format-prefix = ""
+# format-prefix-foreground = ${colors.foreground-alt}
+# format-prefix-underline = ${colors.secondary}
 
 label-layout = %layout%
-label-layout-underline = ${colors.secondary}
+# label-layout-underline = ${colors.secondary}
 
 label-indicator-padding = 2
 label-indicator-margin = 1
@@ -140,12 +179,13 @@ ws-icon-2 = 3;
 ws-icon-3 = 4;
 ws-icon-4 = 5;
 ws-icon-5 = 6;
+ws-icon-6 = 7;
 ws-icon-default = 
-index-sort = true
+index-sort = true 
 wrapping-scroll = false
 
 ; Only show workspaces on the same output as the bar
-; pin-workspaces = true
+pin-workspaces = true
 
 label-mode-padding = 2
 label-mode-foreground = #e2e2e2
@@ -366,33 +406,6 @@ ramp-0 = 
 ramp-1 = 
 ramp-2 = 
 ;ramp-foreground = ${colors.foreground-alt}
-
-[module/powermenu]
-type = custom/menu
-
-format-spacing = 1
-
-label-open = 
-label-open-foreground = ${colors.secondary}
-label-close =  cancel
-label-close-foreground = ${colors.secondary}
-label-separator = |
-label-separator-foreground = ${colors.foreground-alt}
-
-menu-0-0 = reboot
-menu-0-0-exec = menu-open-1
-menu-0-1 = power off
-menu-0-1-exec = menu-open-2
-
-menu-1-0 = cancel
-menu-1-0-exec = menu-open-0
-menu-1-1 = reboot
-menu-1-1-exec = sudo reboot
-
-menu-2-0 = power off
-menu-2-0-exec = sudo poweroff
-menu-2-1 = cancel
-menu-2-1-exec = menu-open-0
 
 [settings]
 screenchange-reload = true

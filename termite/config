@@ -7,8 +7,8 @@ allow_bold = true
 dynamic_title = true
 urgent_on_bell = true
 clickable_url = true
-font = Hack Regular 12
-scrollback_lines = 10000
+font = Hack 10
+scrollback_lines = 10000000
 search_wrap = true
 #icon_name = terminal
 #geometry = 640x480
@@ -43,45 +43,87 @@ filter_unmatched_urls = true
 #roundness = 2.0
 
 # vim: ft=dosini cms=#%s
+
 [colors]
 
 # special
-foreground      = #c0c5ce
-foreground_bold = #c0c5ce
-cursor          = #c0c5ce
-background      = #2b303b
+foreground      = #f0f0f0
+foreground_bold = #f0f0f0
+cursor          = #f0f0f0
+background      = #1d1e20
 
 # black
-color0  = #2b303b
-color8  = #65737e
+color0  = #1f1f20
+color8  = #5c6370
 
 # red
-color1  = #bf616a
-color9  = #bf616a
+color1  = #fb055a
+color9  = #fb055a
 
 # green
-color2  = #a3be8c
-color10 = #a3be8c
+color2  = #26ffd4
+color10 = #26ffd4
 
 # yellow
-color3  = #ebcb8b
-color11 = #ebcb8b
+color3  = #fdaa5a
+color11 = #febe7e
 
 # blue
-color4  = #8fa1b3
-color12 = #8fa1b3
+color4  = #5c9fff
+color12 = #55adff
 
 # magenta
-color5  = #b48ead
-color13 = #b48ead
+color5  = #fc59a6
+color13 = #fd95d0
 
 # cyan
-color6  = #96b5b4
-color14 = #96b5b4
+color6  = #26ffd4
+color14 = #26ffd4
 
 # white
-color7  = #c0c5ce
-color15 = #eff1f5
+color7  = #f0f0f0
+color15 = #f0f0f0
+
+
+#[colors]
+#
+## special
+#foreground      = #c5c8c6
+#foreground_bold = #c5c8c6
+#cursor          = #c5c8c6
+#background      = #2f2f31314343
+#
+## black
+#color0  = #1d1f21
+#color8  = #969896
+#
+## red
+#color1  = #cc6666
+#color9  = #cc6666
+#
+## green
+#color2  = #c1ff8c
+#color10 = #c1ff8c
+#
+## yellow
+#color3  = #f0c674
+#color11 = #f0c674
+#
+## blue
+#color4  = #adcfff
+#color12 = #adcfff
+#
+## magenta
+#color5  = #b294bb
+#color13 = #b294bb
+#
+## cyan
+#color6  = #8abeb7
+#color14 = #8abeb7
+#
+## white
+#color7  = #c5c8c6
+#color15 = #ffffff
 
 
 #[colors]

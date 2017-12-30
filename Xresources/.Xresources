@@ -5,7 +5,6 @@ rofi.color-urgent:                   argb:00000000,  #F99157 , argb:00000000,  #
 rofi.color-active:                   argb:00000000,  #6699CC , argb:00000000,  #6699CC ,  #e8e8e8
 rofi.color-window:                   argb:ee2f343f,  #7cafc2 ,  #242830
 rofi.separator-style:                solid
-
 ! FONTS
 rofi.font: Source Code Pro 12
 
@@ -16,4 +15,4 @@ rofi.width: 50
 rofi.lines: 15
 rofi.columns: 1
 
-
+Xcursor.size: 16

@@ -1,10 +1,14 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'https://github.com/davidhalter/jedi-vim'
+
 Plug 'https://github.com/lervag/vimtex'
 
 Plug 'https://github.com/xuhdev/vim-latex-live-preview'
 
-Plug 'https://github.com/Shougo/neocomplete.vim'
+"  Plug 'https://github.com/Shougo/neocomplete.vim'
+
+Plug 'https://github.com/terryma/vim-multiple-cursors'
 
 Plug 'https://github.com/vim-airline/vim-airline'
 
@@ -17,9 +21,11 @@ let g:auto_save=1
 
 Plug 'https://github.com/jiangmiao/auto-pairs'
 
-Plug 'https://github.com/Shougo/neocomplete.vim'
+" Plug 'https://github.com/Shougo/neocomplete.vim'
 
 Plug 'https://github.com/morhetz/gruvbox'
+
+Plug 'https://github.com/Valloric/YouCompleteMe'
 
 "start syntastic settings"
 Plug 'https://github.com/vim-syntastic/syntastic'
@@ -51,7 +57,7 @@ call plug#end()
 
 set t_Co=256
 syntax on
-colorscheme darkdot
+colorscheme tomorrow-eighties
 
 "airline"
 set laststatus=2
