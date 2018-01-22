@@ -9,12 +9,16 @@ export PYSPARK_DRIVER_PYTHON=jupyter
 export PYSPARK_DRIVER_PYTHON_OPTS='notebook'
 export TERM="xterm-256color"
 
+setopt HIST_IGNORE_SPACE
+
 # Path to your oh-my-zsh installation.
 export ZSH=/home/federico/.oh-my-zsh
 
 alias info='info --vi-keys'
 alias startvm='sudo mount /dev/sda4 /mnt;virtualbox --startvm LXLE-BIAR-1.5c&'
 alias telegram='./Telegram/Telegram&'
+alias fuck='TF_CMD=$(TF_ALIAS=fuck PYTHONIOENCODING=utf-8 TF_SHELL_ALIASES=$(alias) thefuck $(fc -ln -1 | tail -n 1)) && eval $TF_CMD && print -s $TF_CMD'
+
 PATH=/home/federico/Dev/jetbrains-toolbox-1.3.2421:$PATH
 export PATH 
 alias toolbox='jetbrains-toolbox&'

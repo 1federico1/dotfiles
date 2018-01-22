@@ -112,7 +112,7 @@ bindsym $mod+0 workspace 10
 
 
 # move focused container to workspace
-	font pango: Monaco, 0
+	font pango: Hack, 0
 bindsym $mod+Shift+1 move container to workspace 1
 bindsym $mod+Shift+2 move container to workspace 2
 bindsym $mod+Shift+3 move container to workspace 3
@@ -182,8 +182,8 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000
 #	}
 #}
 
-exec --no-startup-id compton --backend xrender --vsync opengl-swc
-# exec --no-startup-id compton --config ~/.config/compton.conf -b
+# exec --no-startup-id compton --backend xrender --vsync opengl-swc
+exec --no-startup-id compton --config ~/.config/compton.conf -b
 exec --no-startup-id nitrogen --restore
 
 exec --no-startup-id nm-applet
@@ -200,7 +200,7 @@ bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% #decrease sound vo
 bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute sound
 
 # Screen brightness controls
-#bindsym XF86MonBrightnessUp exec echo "$(awk '{print $1+100}' /sys/class/backlight/intel_backlight/actual_brightness)">/sys/class/backlight/intel_backlight/brightness # increase screen brightness
+# bindsym XF86MonBrightnessUp exec echo "$(awk '{print $1+100}' /sys/class/backlight/intel_backlight/actual_brightness)">/sys/class/backlight/intel_backlight/brightness # increase screen brightness
 #bindsym XF86MonBrightnessDown exec echo "$(awk '{print $1-100}' /sys/class/backlight/intel_backlight/actual_brightness)">/sys/class/backlight/intel_backlight/brightness
 
 # xbacklight controls
@@ -215,7 +215,9 @@ focus_follows_mouse no
 # unclutter
 exec --no-startup-id unclutter --jitter 100 --ignore-scrolling -b
 # Natural scrolling
-exec --no-startup-id synclient HorizEdgeScroll=1 VertEdgeScroll=1 VertScrollDelta=-111 TapButton1=1 TapButton2=3 TapButton3=2
+#exec --no-startup-id synclient HorizEdgeScroll=1 VertEdgeScroll=1 VertScrollDel# ta=-111 TapButton1=1 TapButton2=3 TapButton3=2
+
+#exec --no-startup-id xinput set-int-prop 16 "libinput Natural Scrolling Enabled"  8 1
 
 # Touchpad delay
 exec syndaemon -K -i 1.0 -R -d
@@ -251,7 +253,7 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 # gaps
 
 for_window [class="^.*"] border pixel 0
-gaps inner 5
+gaps inner 10
 gaps outer 0
 smart_borders on
 smart_gaps on

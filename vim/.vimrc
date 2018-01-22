@@ -1,5 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'https://github.com/dylanaraps/wal.vim'
+
 Plug 'https://github.com/davidhalter/jedi-vim'
 
 Plug 'https://github.com/lervag/vimtex'
@@ -40,7 +42,7 @@ let g:neocomplete#enable_at_startup = 1
 "end syntastic settings"
 "start vim markdown preview settings"
 Plug 'https://github.com/JamshedVesuna/vim-markdown-preview'
-let vim_markdown_preview_browser='Google Chrome'
+let vim_markdown_preview_browser='Firefox'
 let vim_markdown_preview_use_xdg_open=1
 let vim_markdown_preview_github=1
 "end vim markdown preview settings"
@@ -57,11 +59,10 @@ call plug#end()
 
 set t_Co=256
 syntax on
-colorscheme tomorrow-eighties
 
 "airline"
 set laststatus=2
-let g:airline_theme='molokai'
+let g:airline_theme='alduin'
 
 "neocomplete"
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -70,7 +71,6 @@ autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-
 
 "startup"
 :set mouse=a
