@@ -37,7 +37,7 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec termite -e /bin/zsh
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id rofi -config ~/.config/rofi/config -show drun
 
@@ -112,7 +112,7 @@ bindsym $mod+0 workspace 10
 
 
 # move focused container to workspace
-	font pango: Hack, 0
+	font pango: Hack, 8
 bindsym $mod+Shift+1 move container to workspace 1
 bindsym $mod+Shift+2 move container to workspace 2
 bindsym $mod+Shift+3 move container to workspace 3
@@ -208,15 +208,15 @@ bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U  10
 
 # Start dropbox daemon
-exec --no-startup-id dropboxd
+exec --no-startup-id dropbox start
 
 focus_follows_mouse no
 
 # unclutter
-exec --no-startup-id unclutter --jitter 100 --ignore-scrolling -b
+exec --no-startup-id unclutter --jitter 100 --idle 10 --ignore-scrolling -b
 # Natural scrolling
 #exec --no-startup-id synclient HorizEdgeScroll=1 VertEdgeScroll=1 VertScrollDel# ta=-111 TapButton1=1 TapButton2=3 TapButton3=2
-
+exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
 #exec --no-startup-id xinput set-int-prop 16 "libinput Natural Scrolling Enabled"  8 1
 
 # Touchpad delay
