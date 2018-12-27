@@ -1,0 +1,5 @@
+* i3-gaps
+* py3status
+* rofi
+* nmtui
+
