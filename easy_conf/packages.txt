@@ -2,4 +2,6 @@
 * py3status
 * rofi
 * nmtui
-
+* vundle (vim extensions) 
+* grip for vim markdown preview
+* powerline fonts for vim-airline
